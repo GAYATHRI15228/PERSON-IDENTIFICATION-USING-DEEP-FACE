@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepFace Example</title>
+   <style>
+    	
+	body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: linear-gradient(43deg,#4158d0 0%, #c850c0 46%, #ffcc70 100%);
+    }
+    
+    h1 {
+        margin: 0;
+        padding: 20px;
+        background-color: #333;
+        color: #fff;
+    }
+    
+    form {
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 20px;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    input[type="file"] {
+        margin-bottom: 20px;
+    }
+    
+    input[type="submit"] {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+   </style>
+</head>
+<body>
+    <h1>DeepFace Example</h1>
+    <p>Similarity score: {{ result['verified'] }}</p>
+    {% if result['verified'] == True %}
+    <p>The two images match.</p>
+    {% else %}
+    <p>The two images do not match.</p>
+    {% endif %}
+</body>
+</html>
